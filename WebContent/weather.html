@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Abhinav the Prince - Weather Online</title>
+<script>
+	function fieldcheck() {
+		if (document.forms[0].p.value.length != 0) {
+			document.forms[0].b.disabled = false;
+		}
+		if (document.forms[0].p.value.length == 0) {
+			document.forms[0].b.disabled = true;
+		}
+	}
+</script>
+
+</head>
+<body>
+<center><img src="weather.jpg"></center>
+<br><br><br>
+	<form action="weatherServlet">
+		<b>Enter place <font color="red">*</font> : </b><input type="textbox" name="p" onkeyup="fieldcheck()"><br>
+		<sup>(Required)</sup><br><br>
+		<b>Enter Country : </b><input type="textbox" name="c"><br>
+		<sup>(optional)</sup><br><br><br>
+		<input style="font-size: 20px" type="submit" value="Get Weather Now" name="b" disabled="disabled">
+	</form>
+</body>
+</html>
